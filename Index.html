@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AMRCC — Abrar & Mahmoodi Road and Construction Company</title>
+  <style>
+    :root{
+      --accent:#ff8a00;
+      --dark:#0f1724;
+      --muted:#9aa6b2;
+      --card:#0f1728;
+      --glass: rgba(255,255,255,0.04);
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{background:linear-gradient(180deg,#071026 0%, #071828 100%);color:#e6eef6;line-height:1.5}
+    a{color:var(--accent);text-decoration:none}
+    header{background-image: url('images/Background.jpeg');background-size:cover;background-position:center;position:relative}
+    header::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg, rgba(8,12,20,0.65), rgba(6,10,18,0.75));}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:22px 28px;position:relative;z-index:2}
+    .logo{font-weight:700;font-size:22px}
+    nav ul{display:flex;gap:18px;list-style:none}
+    nav a{padding:8px 12px;border-radius:8px;color:#e6eef6}
+    nav a:hover{background:rgba(255,255,255,0.04)}
+    .hero{max-width:1200px;margin:48px auto;padding:48px 28px;display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;position:relative;z-index:2}
+    .hero-left h1{font-size:44px;margin-bottom:12px}
+    .hero-left p{color:var(--muted);margin-bottom:18px}
+    .cta{display:inline-block;padding:12px 18px;background:var(--accent);color:#0a0a0a;border-radius:10px;font-weight:600}
+    .slideshow{background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));padding:18px;border-radius:12px}
+    .slides{position:relative;height:260px;overflow:hidden;border-radius:8px}
+    .slide{position:absolute;inset:0;opacity:0;transform:translateX(20px);transition:all .7s ease;background-size:cover;background-position:center}
+    .slide.active{opacity:1;transform:none}
+    .slide-overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(4,6,10,0.0), rgba(4,6,10,0.5));display:flex;align-items:flex-end;padding:18px;color:#fff}
+    main{max-width:1200px;margin:28px auto;padding:18px}
+    section{margin-bottom:48px}
+    .projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
+    .card{background:var(--card);padding:12px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,10,0.6);transition:transform .18s}
+    .card:hover{transform:translateY(-6px)}
+    .card img{width:100%;height:160px;object-fit:cover;border-radius:8px}
+    .card h3{margin:10px 0 6px;font-size:18px}
+    .details{background:var(--glass);padding:8px;border-radius:6px;font-size:13px;color:var(--muted);margin-top:8px}
+    .about-grid{display:grid;grid-template-columns:1fr 340px;gap:22px}
+    .info-box{background:var(--glass);padding:18px;border-radius:10px}
+    footer{background:#071722;padding:28px;border-top:1px solid rgba(255,255,255,0.03)}
+    .footer-grid{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:flex-start;max-width:1200px;margin:0 auto}
+    .socials{display:flex;gap:12px}
+    .socials a{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:8px;background:rgba(255,255,255,0.02)}
+    .copy{color:var(--muted);margin-top:12px}
+    @media (max-width:900px){.hero{grid-template-columns:1fr;}.about-grid{grid-template-columns:1fr}.nav{padding:14px}}
+  </style>
+</head>
+<body>
+<header>
+<div class="nav">
+  <div class="logo" style="background-color: whitesmoke; border:2px solid #ffffff4b; padding:4px; border-radius:6px; display:inline-block;">
+    <img src="images/logo.png" alt="AMRCC Logo" style="height:40px;">
+  </div>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </nav>
+</div>
+<div class="hero" id="home">
+  <div class="hero-left">
+    <h1>Abrar & Mahmoodi Road & Construction Company</h1>
+    <p>AMRCC is a leading Afghan construction and engineering firm delivering roads, public buildings, water systems, and energy infrastructure with safety, quality and local expertise at the core of every project.</p>
+    <a class="cta" href="#projects">View Projects</a>
+  </div>
+</div>
+</header>
+
+<main>
+<section id="home-overview" style="padding:24px; max-width:1200px; margin:0 auto;">
+  <h2>Company Overview</h2>
+  <p id="overview-short">Abrar & Mahmoodi Road & Construction Company (AMRCC), established in 2019, is a leading Afghan private construction firm specializing in roads, buildings, and infrastructure projects. We are committed to quality, safety, and empowering Afghan professionals. Our services include road construction, administrative buildings, water systems, and electrical infrastructure. With strong legal and UNGM registrations, we ensure transparency and accountability in all projects. Our mission focuses on sustainable growth, innovation, and community empowerment across Afghanistan.</p>
+  <button id="readMoreBtn" style="margin-top:12px;padding:8px 14px;background:var(--accent);border:none;color:#0a0a0a;border-radius:6px;cursor:pointer;">Read More</button>
+  <div id="overview-full" style="display:none; margin-top:12px; color:var(--muted);">
+    <p>Legal Registration:<br>
+    • Registered with MoCI, License No.: 58938, Registration No.: 133425, TIN: 9007548432</p>
+    <p>UNGM Registration:<br>• UNGM Vendor No.: 943691</p>
+    <p>Head Office: Ferdowsi Square, Afsootar Business Market, Mazar-e-Sharif, Balkh, Afghanistan</p>
+    <p>Contact: +93 731 114 114 / +93 731 111 234, Email: amrcc.2018@gmail.com</p>
+    <p>Vision, Mission, Core Values, Services, Technical Expertise, Organizational Structure, Executive Team, and Key Technical Staff details are available here.</p>
+  </div>
+</section>
+<script>
+  document.getElementById('readMoreBtn').addEventListener('click', function(){
+    var full = document.getElementById('overview-full');
+    if(full.style.display === 'none'){
+      full.style.display = 'block';
+      this.textContent = 'Read Less';
+    } else {
+      full.style.display = 'none';
+      this.textContent = 'Read More';
+    }
+  });
+</script>
+</body>
+</html>
+
+<div class="slideshow" style="max-width:1200px;margin:20px auto;border-radius:12px;overflow:hidden">
+    <div class="slides" id="slides">
+      <div class="slide active" style="background-image:url('Images/Background.jpeg');height:300px;background-size:cover;background-position:center">
+        <div class="slide-overlay" style="position:absolute;inset:0;background:linear-gradient(180deg, rgba(4,6,10,0.0), rgba(4,6,10,0.5));display:flex;align-items:flex-end;padding:18px;color:#fff">
+          <div>
+            <h3>Construction of Shelter at Port Four (Naibabad), Customs of Balkh Province</h3>
+            <p style="font-size:14px;margin-top:6px">MOF/1403/W-815-Rebid Balkh Custom, Ministry of finance Balkh province, Nayeb Ababad (Port 4) 1403</p>
+          </div>
+        </div>
+      </div>
+      <div class="slide" style="background-image:url('Images/Aqcha.jpeg');height:300px;background-size:cover;background-position:center">
+        <div class="slide-overlay" style="position:absolute;inset:0;background:linear-gradient(180deg, rgba(4,6,10,0.0), rgba(4,6,10,0.5));display:flex;align-items:flex-end;padding:18px;color:#fff">
+          <div>
+            <h3>Aqche Electrical Substation – Civil Works</h3>
+            <p style="font-size:14px;margin-top:6px">برشناشرکت/1445/داوطلبی باز ملی/ساختمان/015 Da Afghanistan Brishna Sherakat Jawzjan Province, Aqcha District 1402</p>
+          </div>
+        </div>
+      </div>
+      <div class="slide" style="background-image:url('Images/AfgChin.jpeg');height:300px;background-size:cover;background-position:center">
+        <div class="slide-overlay" style="position:absolute;inset:0;background:linear-gradient(180deg, rgba(4,6,10,0.0), rgba(4,6,10,0.5));display:flex;align-items:flex-end;padding:18px;color:#fff">
+          <div>
+            <h3>Construction of Laboratory and Provision of Equipment</h3>
+            <p style="font-size:14px;margin-top:6px">063/SC/024 AfgChin Oil & Gas Ltd. Qashqari Oilfield, Sar-e Pul Province 1403</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    let slides = document.querySelectorAll('.slide');
+    let index = 0;
+    setInterval(()=>{
+      slides[index].classList.remove('active');
+      index = (index + 1) % slides.length;
+      slides[index].classList.add('active');
+    }, 4000);
+  </script>
+  
+<main>
+  <section id="projects">
+    <h2 style="margin-bottom:14px">Projects</h2>
+    <p style="color:var(--muted);margin-bottom:18px">Selected 8 key projects with contract details, client, budget, and status.</p>
+    <div class="projects-grid">
+      <!-- 8 selected projects -->
+      <div class="card">
+        <img src="Images/Dalkhaki.jpeg" alt="Freight & Passenger Terminal">
+        <h3>Freight & Passenger Terminal Building Construction</h3>
+        <div class="details">Contract: MOTA/1403/W-677<br>Client: Ministry of Transport & Aviation<br>Location: Dalkhaki, Samangan Province<br>Start-End: 1403-1404<br>Budget: AFN 28,840,370<br>Status: Completed</div>
+      </div>
+      <div class="card">
+        <img src="Images/Aqina.jpeg" alt="Boundary walls and towers">
+        <h3>Construction of boundary walls and towers</h3>
+        <div class="details">Contract: MOF/1403/NCB/W-018<br>Client: Aqina Custom<br>Location: Aqina, Faryab<br>Start-End: 1403-1404<br>Budget: AFN 44,795,420<br>Status: Completed</div>
+      </div>
+      <div class="card">
+        <img src="Images/AfgChin.jpeg" alt="Laboratory Construction">
+        <h3>Construction of Laboratory and Provision of Equipment</h3>
+        <div class="details">Contract: 063/SC/024<br>Client: AfgChin Oil & Gas Ltd.<br>Location: Qashqari Oilfield, Sar-e Pul Province<br>Start-End: 1403<br>Budget: USD 196,054.5<br>Status: Completed</div>
+      </div>
+      <div class="card">
+        <img src="Images/Background.jpeg" alt="Construction Shelter Port 4">
+        <h3>Construction of Shelter at Port Four (Naibabad)</h3>
+        <div class="details">Contract: MOF/1403/W-815-Rebid<br>Client: Balkh Custom, Ministry of Finance<br>Location: Balkh Province, Nayeb Ababad (Port 4)<br>Start-End: 1403-1404<br>Budget: AFN 30,564,200<br>Status: Ongoing 90%</div>
+      </div>
+      <div class="card">
+        <img src="Images/Ferdowsi.jpeg" alt="Road Widening & Asphalt">
+        <h3>Road Widening, Bitumen Laying, and Asphalt Paving around Ferdowsi Intersection</h3>
+        <div class="details">Contract: MAZ/MUN/011<br>Client: Mazar-e Sharif Municipality<br>Location: Ferdowsi Square, Mazar-e-Sharif<br>Start-End: 1404<br>Budget: AFN 13,625,304<br>Status: Ongoing 50%</div>
+      </div>
+      <div class="card">
+        <img src="Images/Aqcha.jpeg" alt="Aqche Electrical Substation">
+        <h3>Aqche Electrical Substation – Civil Works</h3>
+        <div class="details">Contract: برشناشرکت/1445/داوطلبی باز ملی/ساختمان/015<br>Client: Da Afghanistan Brishna Sherakat<br>Location: Jawzjan Province, Aqcha District<br>Start-End: 1402-1403<br>Budget: AFN 23,605,358<br>Status: Completed</div>
+      </div>
+      <div class="card">
+        <img src="Images/Gravel.jpeg" alt="Gravel Road & Loading Area">
+        <h3>Gravel Road (860m) + Loading Area (1580m) Construction</h3>
+        <div class="details">Contract: ARA/1402/NCB/W-009<br>Client: Afghanistan Railway Authority<br>Location: Aqina City, Faryab Province<br>Start-End: 1403<br>Budget: AFN 9,216,865.5<br>Status: Completed</div>
+      </div>
+      <div class="card">
+        <img src="Images/Kolali.jpeg" alt="Road Concrete">
+        <h3>Road Concrete</h3>
+        <div class="details">Contract: Balkh/Maz/004<br>Client: Mazar-e Sharif Municipality<br>Location: Kolali Street, District #2<br>Start-End: 1401<br>Budget: AFN 3,788,290<br>Status: Completed</div>
+      </div>
+    </div>
+</section>
+<section id="about">
+  <h2 style="margin-bottom:14px">About Us & Contact</h2>
+  <div class="about-grid">
+    <div>
+      <div class="info-box">
+        <h3>Who we are</h3>
+        <p style="color:var(--muted);margin-top:8px">AMRCC was established in 2019 in Mazar-e-Sharif, Afghanistan. We specialize in engineering, road construction, water systems, public buildings, and energy infrastructure. Our team includes experienced engineers, project managers, and skilled field crews committed to delivering projects on time and to specification.</p>
+        <h4 style="margin-top:12px">Core Services</h4>
+        <ul style="color:var(--muted);margin-top:6px">
+          <li>Road & Highway Construction</li>
+          <li>Public & Administrative Buildings</li>
+          <li>Water Systems & Irrigation</li>
+          <li>Energy Infrastructure & Substations</li>
+          <li>Railway & Transportation Support</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="info-box">
+        <h3>Contact & Address</h3>
+        <p style="color:var(--muted);margin-top:8px">
+          Abrar & Mahmoodi Road and Construction Company (AMRCC)<br>
+          Mazar-e-Sharif, Balkh, Afghanistan<br>
+          Phone: +93731114114 +93731111234<br>
+          Email: amrcc.2018@gmail.com<br>
+          License No: 58938 <br> 
+          UNGM Vendor No: 943691
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+<div class="footer-grid">
+  <div>
+    <h4>AMRCC</h4>
+    <p style="color:var(--muted)">Leading Afghan construction company specializing in roads, buildings, and energy projects.</p>
+  </div>
+  <div class="socials">
+    <a href="#"><img src="https://img.icons8.com/ios-filled/24/ffffff/facebook-new.png"/></a>
+    <a href="#"><img src="https://img.icons8.com/ios-filled/24/ffffff/twitter.png"/></a>
+    <a href="#"><img src="https://img.icons8.com/ios-filled/24/ffffff/linkedin.png"/></a>
+    <a href="#"><img src="https://img.icons8.com/ios-filled/24/ffffff/instagram-new.png"/></a>
+  </div>
+</div>
+<div class="copy"><center>&copy; 2025 AMRCC. All rights reserved.
+    <br>
+    <h6>Designed by: Zaman Rasikh
+    </h6> </center></div>
+</footer>
+<script>
+// Simple slideshow rotation
+let slides = document.querySelectorAll('.slide');
+let index = 0;
+setInterval(()=>{
+  slides[index].classList.remove('active');
+  index = (index+1)%slides.length;
+  slides[index].classList.add('active');
+},4000);
+</script>
+</body>
+</html>
+
